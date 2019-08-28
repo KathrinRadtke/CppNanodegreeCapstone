@@ -22,7 +22,6 @@ Input InputHandler::GetInput()
           return Input::Left;          
           break;
         case SDLK_RIGHT:
-        std::cout << "right " << std::endl;
           return Input::Right;
           break;
       }

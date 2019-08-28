@@ -11,8 +11,8 @@
 
 class Game {
  public:
-  Game(Renderer &renderer, std::size_t grid_width, std::size_t grid_height);
-  void Run(std::size_t target_frame_duration);
+  Game(Renderer &renderer, std::size_t grid_width, std::size_t grid_height, std::size_t target_frame_duration);
+  void Run();
 
  private:
   Renderer renderer;
@@ -21,10 +21,17 @@ class Game {
   std::uniform_int_distribution<int> random_w;
   std::uniform_int_distribution<int> random_h;
 
-  std::vector<GameObject*> gameObjects;
+  std::size_t target_frame_duration;
+  Uint32 frame_start;
+  Uint32 frame_end;
+  Uint32 frame_duration;
+
+  std::vector<std::shared_ptr<GameObject>> gameObjects;
 
   void Setup();
   void Update(Input input);
+
+  void WaitForTargetFrameRate();
 };
 
 #endif

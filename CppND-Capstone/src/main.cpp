@@ -12,9 +12,9 @@ int main() {
   constexpr std::size_t kGridHeight{32};
 
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
-  Game game(renderer, kGridWidth, kGridHeight);
+  Game game(renderer, kGridWidth, kGridHeight, kMsPerFrame);
   InputHandler inputHandler;
-  game.Run(kMsPerFrame);
+  game.Run();
   std::cout << "Game has terminated successfully!\n";
   return 0;
 }

@@ -17,7 +17,6 @@ class Renderer {
 
 
   void Render();
-  void UpdateWindowTitle(int score, int fps);
 
  private:
   SDL_Window *sdl_window;
