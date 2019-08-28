@@ -54,6 +54,8 @@ CMakeFiles/DogGame.dir/src/game.cpp.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SD
 CMakeFiles/DogGame.dir/src/game.cpp.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
 
 CMakeFiles/DogGame.dir/src/gameObject.cpp.o: ../src/gameObject.cpp
+CMakeFiles/DogGame.dir/src/gameObject.cpp.o: ../src/gameObject.h
+CMakeFiles/DogGame.dir/src/gameObject.cpp.o: ../src/inputHandler.h
 
 CMakeFiles/DogGame.dir/src/inputHandler.cpp.o: ../src/inputHandler.cpp
 CMakeFiles/DogGame.dir/src/inputHandler.cpp.o: ../src/inputHandler.h
@@ -156,9 +158,12 @@ CMakeFiles/DogGame.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SD
 CMakeFiles/DogGame.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
 
 CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/gameObject.h
+CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/inputHandler.h
 CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/player.cpp
 CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/player.h
 
+CMakeFiles/DogGame.dir/src/renderer.cpp.o: ../src/gameObject.h
+CMakeFiles/DogGame.dir/src/renderer.cpp.o: ../src/inputHandler.h
 CMakeFiles/DogGame.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/DogGame.dir/src/renderer.cpp.o: ../src/renderer.h
 CMakeFiles/DogGame.dir/src/renderer.cpp.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h

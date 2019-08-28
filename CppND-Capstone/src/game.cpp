@@ -1,13 +1,12 @@
 #include "game.h"
 #include <iostream>
-#include "SDL.h"
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
+Game::Game(Renderer &renderer, std::size_t grid_width, std::size_t grid_height)
     : engine(dev()),
+      renderer(renderer),
       random_w(0, static_cast<int>(grid_width)),
-      random_h(0, static_cast<int>(grid_height)) {
-
-      Setup();
+      random_h(0, static_cast<int>(grid_height)) 
+{
 }
 
 void Game::Setup()
@@ -15,8 +14,8 @@ void Game::Setup()
 
 }
 
-void Game::Run(InputHandler &inputHandler, Renderer &renderer,
-               std::size_t target_frame_duration) {
+void Game::Run(std::size_t target_frame_duration) 
+{
   Uint32 title_timestamp = SDL_GetTicks();
   Uint32 frame_start;
   Uint32 frame_end;
@@ -24,17 +23,25 @@ void Game::Run(InputHandler &inputHandler, Renderer &renderer,
   int frame_count = 0;
   bool running = true;
 
-    Player* player;
-  player->xPosition = 10;
+  InputHandler inputHandler;
+
+  Player* player = new Player(10, 10, "dog.bmp");
   gameObjects.push_back(player);
   std::cout << "Hello " << std::endl;
 
   while (running) {
+    Input input = inputHandler.GetInput();
+
+    if(input == Input::Exit)
+    {
+      running = false;
+      break;
+    }
+
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
-    Update(inputHandler);
-    renderer.Render();
+    Update(input);
 
     frame_end = SDL_GetTicks();
 
@@ -58,9 +65,14 @@ void Game::Run(InputHandler &inputHandler, Renderer &renderer,
   }
 }
 
-void Game::Update(InputHandler &inputHandler) {
-   for(GameObject *gameObject : gameObjects)
+void Game::Update(Input input) 
+{
+  renderer.Clear();
+  for(GameObject *gameObject : gameObjects)
   {
-    //gameObject->Update();
+    gameObject->Update(input);
+    renderer.Render(*gameObject);
   }
+
+  renderer.Apply();
 }

@@ -71,50 +71,31 @@ Renderer::~Renderer() {
   SDL_Quit();
 }
 
-void Renderer::Render() {
-  SDL_Rect block;
-  block.w = screen_width / grid_width;
-  block.h = screen_height / grid_height;
-
-  // Clear screen
+void Renderer::Clear()
+{
   SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
   SDL_RenderClear(sdl_renderer);
+}
+
+void Renderer::Render(const GameObject &gameObject)
+{
+   SDL_Rect block;
+  block.w = screen_width / grid_width;
+  block.h = screen_height / grid_height;
+  block.x = gameObject.xPosition * block.w;
+  block.y = gameObject.yPosition * block.h;
 
 
- std::string imagePath = getResourcePath("Player") + "dog.bmp";
-SDL_Surface *bmp = SDL_LoadBMP(imagePath.c_str());
+  std::string imagePath = getResourcePath("Player") + gameObject.spriteName;
+  SDL_Surface *bmp = SDL_LoadBMP(imagePath.c_str());
 
-SDL_Texture *tex = SDL_CreateTextureFromSurface(sdl_renderer, bmp);
+  SDL_Texture *tex = SDL_CreateTextureFromSurface(sdl_renderer, bmp);
 
-SDL_FreeSurface(bmp);
-block.x = 2 *block.w;
-block.y = 6 * block.h;
-SDL_RenderCopy(sdl_renderer, tex, NULL, &block);
-/*
-  // Render food
-  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  block.x = food.x * block.w;
-  block.y = food.y * block.h;
-  SDL_RenderFillRect(sdl_renderer, &block);
+  SDL_FreeSurface(bmp);
+  SDL_RenderCopy(sdl_renderer, tex, NULL, &block);
+}
 
-  // Render snake's body
-  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-  for (SDL_Point const &point : snake.body) {
-    block.x = point.x * block.w;
-    block.y = point.y * block.h;
-    SDL_RenderFillRect(sdl_renderer, &block);
-  }
-
-  // Render snake's head
-  block.x = static_cast<int>(snake.head_x) * block.w;
-  block.y = static_cast<int>(snake.head_y) * block.h;
-  if (snake.alive) {
-    SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
-  } else {
-    SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
-  }
-  SDL_RenderFillRect(sdl_renderer, &block);
-*/
-  // Update Screen
-  SDL_RenderPresent(sdl_renderer);
+void Renderer::Apply()
+{
+   SDL_RenderPresent(sdl_renderer);
 }

@@ -11,11 +11,11 @@
 
 class Game {
  public:
-  Game(std::size_t grid_width, std::size_t grid_height);
-  void Run(InputHandler &inputHandler, Renderer &renderer,
-           std::size_t target_frame_duration);
+  Game(Renderer &renderer, std::size_t grid_width, std::size_t grid_height);
+  void Run(std::size_t target_frame_duration);
 
  private:
+  Renderer renderer;
   std::random_device dev;
   std::mt19937 engine;
   std::uniform_int_distribution<int> random_w;
@@ -24,7 +24,7 @@ class Game {
   std::vector<GameObject*> gameObjects;
 
   void Setup();
-  void Update(InputHandler &inputHandler);
+  void Update(Input input);
 };
 
 #endif

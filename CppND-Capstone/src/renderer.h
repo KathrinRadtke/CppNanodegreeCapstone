@@ -2,6 +2,7 @@
 #define RENDERER_H
 
 #include <vector>
+#include "gameObject.h"
 #include "SDL.h"
 
 class Renderer {
@@ -9,6 +10,11 @@ class Renderer {
   Renderer(const std::size_t screen_width, const std::size_t screen_height,
            const std::size_t grid_width, const std::size_t grid_height);
   ~Renderer();
+
+  void Clear();
+  void Render(const GameObject &gameObject);
+  void Apply();
+
 
   void Render();
   void UpdateWindowTitle(int score, int fps);

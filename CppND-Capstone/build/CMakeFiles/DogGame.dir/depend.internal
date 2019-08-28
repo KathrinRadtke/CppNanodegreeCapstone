@@ -55,6 +55,8 @@ CMakeFiles/DogGame.dir/src/game.cpp.o
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
 CMakeFiles/DogGame.dir/src/gameObject.cpp.o
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.cpp
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.h
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/inputHandler.h
 CMakeFiles/DogGame.dir/src/inputHandler.cpp.o
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/inputHandler.cpp
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/inputHandler.h
@@ -157,9 +159,12 @@ CMakeFiles/DogGame.dir/src/main.cpp.o
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
 CMakeFiles/DogGame.dir/src/player.cpp.o
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.h
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/inputHandler.h
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/player.cpp
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/player.h
 CMakeFiles/DogGame.dir/src/renderer.cpp.o
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.h
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/inputHandler.h
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/renderer.cpp
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/renderer.h
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
