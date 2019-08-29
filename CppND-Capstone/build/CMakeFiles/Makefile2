@@ -74,12 +74,12 @@ preinstall:
 CMakeFiles/DogGame.dir/all:
 	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/depend
 	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target DogGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target DogGame"
 .PHONY : CMakeFiles/DogGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DogGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DogGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles 0
 .PHONY : CMakeFiles/DogGame.dir/rule

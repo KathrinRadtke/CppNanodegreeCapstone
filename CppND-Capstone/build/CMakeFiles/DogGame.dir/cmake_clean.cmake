@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/DogGame.dir/src/cell.cpp.o"
   "CMakeFiles/DogGame.dir/src/game.cpp.o"
-  "CMakeFiles/DogGame.dir/src/gameObject.cpp.o"
   "CMakeFiles/DogGame.dir/src/inputHandler.cpp.o"
   "CMakeFiles/DogGame.dir/src/main.cpp.o"
+  "CMakeFiles/DogGame.dir/src/maze.cpp.o"
   "CMakeFiles/DogGame.dir/src/player.cpp.o"
   "CMakeFiles/DogGame.dir/src/renderer.cpp.o"
   "DogGame"

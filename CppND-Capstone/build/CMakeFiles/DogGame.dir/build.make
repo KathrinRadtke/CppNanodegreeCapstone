@@ -122,18 +122,31 @@ CMakeFiles/DogGame.dir/src/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DogGame.dir/src/player.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/player.cpp -o CMakeFiles/DogGame.dir/src/player.cpp.s
 
-CMakeFiles/DogGame.dir/src/gameObject.cpp.o: CMakeFiles/DogGame.dir/flags.make
-CMakeFiles/DogGame.dir/src/gameObject.cpp.o: ../src/gameObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DogGame.dir/src/gameObject.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DogGame.dir/src/gameObject.cpp.o -c /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.cpp
+CMakeFiles/DogGame.dir/src/maze.cpp.o: CMakeFiles/DogGame.dir/flags.make
+CMakeFiles/DogGame.dir/src/maze.cpp.o: ../src/maze.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DogGame.dir/src/maze.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DogGame.dir/src/maze.cpp.o -c /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.cpp
 
-CMakeFiles/DogGame.dir/src/gameObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DogGame.dir/src/gameObject.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.cpp > CMakeFiles/DogGame.dir/src/gameObject.cpp.i
+CMakeFiles/DogGame.dir/src/maze.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DogGame.dir/src/maze.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.cpp > CMakeFiles/DogGame.dir/src/maze.cpp.i
 
-CMakeFiles/DogGame.dir/src/gameObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DogGame.dir/src/gameObject.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.cpp -o CMakeFiles/DogGame.dir/src/gameObject.cpp.s
+CMakeFiles/DogGame.dir/src/maze.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DogGame.dir/src/maze.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.cpp -o CMakeFiles/DogGame.dir/src/maze.cpp.s
+
+CMakeFiles/DogGame.dir/src/cell.cpp.o: CMakeFiles/DogGame.dir/flags.make
+CMakeFiles/DogGame.dir/src/cell.cpp.o: ../src/cell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DogGame.dir/src/cell.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DogGame.dir/src/cell.cpp.o -c /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.cpp
+
+CMakeFiles/DogGame.dir/src/cell.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DogGame.dir/src/cell.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.cpp > CMakeFiles/DogGame.dir/src/cell.cpp.i
+
+CMakeFiles/DogGame.dir/src/cell.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DogGame.dir/src/cell.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.cpp -o CMakeFiles/DogGame.dir/src/cell.cpp.s
 
 # Object files for target DogGame
 DogGame_OBJECTS = \
@@ -142,7 +155,8 @@ DogGame_OBJECTS = \
 "CMakeFiles/DogGame.dir/src/renderer.cpp.o" \
 "CMakeFiles/DogGame.dir/src/inputHandler.cpp.o" \
 "CMakeFiles/DogGame.dir/src/player.cpp.o" \
-"CMakeFiles/DogGame.dir/src/gameObject.cpp.o"
+"CMakeFiles/DogGame.dir/src/maze.cpp.o" \
+"CMakeFiles/DogGame.dir/src/cell.cpp.o"
 
 # External object files for target DogGame
 DogGame_EXTERNAL_OBJECTS =
@@ -152,10 +166,11 @@ DogGame: CMakeFiles/DogGame.dir/src/game.cpp.o
 DogGame: CMakeFiles/DogGame.dir/src/renderer.cpp.o
 DogGame: CMakeFiles/DogGame.dir/src/inputHandler.cpp.o
 DogGame: CMakeFiles/DogGame.dir/src/player.cpp.o
-DogGame: CMakeFiles/DogGame.dir/src/gameObject.cpp.o
+DogGame: CMakeFiles/DogGame.dir/src/maze.cpp.o
+DogGame: CMakeFiles/DogGame.dir/src/cell.cpp.o
 DogGame: CMakeFiles/DogGame.dir/build.make
 DogGame: CMakeFiles/DogGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable DogGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable DogGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DogGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

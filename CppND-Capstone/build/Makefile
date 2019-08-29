@@ -123,6 +123,33 @@ DogGame/fast:
 	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/build
 .PHONY : DogGame/fast
 
+src/cell.o: src/cell.cpp.o
+
+.PHONY : src/cell.o
+
+# target to build an object file
+src/cell.cpp.o:
+	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/cell.cpp.o
+.PHONY : src/cell.cpp.o
+
+src/cell.i: src/cell.cpp.i
+
+.PHONY : src/cell.i
+
+# target to preprocess a source file
+src/cell.cpp.i:
+	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/cell.cpp.i
+.PHONY : src/cell.cpp.i
+
+src/cell.s: src/cell.cpp.s
+
+.PHONY : src/cell.s
+
+# target to generate assembly for a file
+src/cell.cpp.s:
+	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/cell.cpp.s
+.PHONY : src/cell.cpp.s
+
 src/game.o: src/game.cpp.o
 
 .PHONY : src/game.o
@@ -149,33 +176,6 @@ src/game.s: src/game.cpp.s
 src/game.cpp.s:
 	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
-
-src/gameObject.o: src/gameObject.cpp.o
-
-.PHONY : src/gameObject.o
-
-# target to build an object file
-src/gameObject.cpp.o:
-	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/gameObject.cpp.o
-.PHONY : src/gameObject.cpp.o
-
-src/gameObject.i: src/gameObject.cpp.i
-
-.PHONY : src/gameObject.i
-
-# target to preprocess a source file
-src/gameObject.cpp.i:
-	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/gameObject.cpp.i
-.PHONY : src/gameObject.cpp.i
-
-src/gameObject.s: src/gameObject.cpp.s
-
-.PHONY : src/gameObject.s
-
-# target to generate assembly for a file
-src/gameObject.cpp.s:
-	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/gameObject.cpp.s
-.PHONY : src/gameObject.cpp.s
 
 src/inputHandler.o: src/inputHandler.cpp.o
 
@@ -230,6 +230,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/maze.o: src/maze.cpp.o
+
+.PHONY : src/maze.o
+
+# target to build an object file
+src/maze.cpp.o:
+	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/maze.cpp.o
+.PHONY : src/maze.cpp.o
+
+src/maze.i: src/maze.cpp.i
+
+.PHONY : src/maze.i
+
+# target to preprocess a source file
+src/maze.cpp.i:
+	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/maze.cpp.i
+.PHONY : src/maze.cpp.i
+
+src/maze.s: src/maze.cpp.s
+
+.PHONY : src/maze.s
+
+# target to generate assembly for a file
+src/maze.cpp.s:
+	$(MAKE) -f CMakeFiles/DogGame.dir/build.make CMakeFiles/DogGame.dir/src/maze.cpp.s
+.PHONY : src/maze.cpp.s
 
 src/player.o: src/player.cpp.o
 
@@ -294,18 +321,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... DogGame"
+	@echo "... src/cell.o"
+	@echo "... src/cell.i"
+	@echo "... src/cell.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
-	@echo "... src/gameObject.o"
-	@echo "... src/gameObject.i"
-	@echo "... src/gameObject.s"
 	@echo "... src/inputHandler.o"
 	@echo "... src/inputHandler.i"
 	@echo "... src/inputHandler.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/maze.o"
+	@echo "... src/maze.i"
+	@echo "... src/maze.s"
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"

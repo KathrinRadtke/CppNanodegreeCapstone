@@ -21,6 +21,8 @@ void Game::Run()
 {
   bool running = true;
   InputHandler inputHandler;
+  Maze maze(20, 20);
+  maze.Generate();
 
   while (running) {
     Input input = inputHandler.GetInput();
@@ -33,7 +35,7 @@ void Game::Run()
 
     frame_start = SDL_GetTicks();
 
-    Update(input);
+    Update(input, maze);
 
     frame_end = SDL_GetTicks();
 
@@ -41,14 +43,17 @@ void Game::Run()
   }
 }
 
-void Game::Update(Input input) 
+void Game::Update(Input input, Maze maze) 
 {
   renderer.Clear();
+  renderer.Render(maze);
+
   for(int i = 0; i< gameObjects.size(); i++)
   {
     gameObjects[i]->Update(input);
     renderer.Render(*gameObjects[i]);
   }
+
   renderer.Apply();
 }
 

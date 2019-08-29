@@ -79,9 +79,9 @@ void Renderer::Clear()
 
 void Renderer::Render(const GameObject &gameObject)
 {
-   SDL_Rect block;
-  block.w = screen_width / grid_width;
-  block.h = screen_height / grid_height;
+  SDL_Rect block;
+  block.w = grid_width;
+  block.h = grid_height;
   block.x = gameObject.xPosition * block.w;
   block.y = gameObject.yPosition * block.h;
 
@@ -94,6 +94,47 @@ void Renderer::Render(const GameObject &gameObject)
   SDL_FreeSurface(bmp);
   SDL_RenderCopy(sdl_renderer, tex, NULL, &block);
 }
+
+void Renderer::Render(const Maze &maze)
+{
+  for(std::vector<Cell> rows : maze.cells)
+  {
+    for(Cell cell : rows)
+    {
+     
+      SDL_Rect block;
+      block.w = grid_width;
+      block.h = grid_height;
+      block.x = cell.xPosition * block.w;
+      block.y = cell.yPosition * block.h;
+
+      SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
+      if(cell.visited)
+      {
+          SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0xCC, 0x00, 0xFF);
+      }
+
+      SDL_RenderFillRect(sdl_renderer, &block);
+
+      Render(cell.wallLeft);
+      Render(cell.wallTop);
+      Render(cell.wallRight);
+      Render(cell.wallBottom);
+ 
+    }
+  }
+}
+
+void Renderer::Render(const Wall &wall)
+{
+  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0xFF, 0xFF);
+  if(wall.enabled)
+  {
+    SDL_RenderDrawLine(sdl_renderer, wall.startX * grid_width, wall.startY * grid_height, wall.endX * grid_width, wall.endY * grid_height);
+  }
+}
+
+
 
 void Renderer::Apply()
 {

@@ -3,6 +3,9 @@
 
 #include <vector>
 #include "gameObject.h"
+#include "maze.h"
+#include "cell.h"
+#include "wall.h"
 #include "SDL.h"
 
 class Renderer {
@@ -13,6 +16,8 @@ class Renderer {
 
   void Clear();
   void Render(const GameObject &gameObject);
+  void Render(const Maze &maze);
+  void Render(const Wall &wall);
   void Apply();
 
 

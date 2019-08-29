@@ -8,6 +8,7 @@
 #include "inputHandler.h"
 #include "gameObject.h"
 #include "player.h"
+#include "maze.h"
 
 class Game {
  public:
@@ -29,7 +30,7 @@ class Game {
   std::vector<std::shared_ptr<GameObject>> gameObjects;
 
   void Setup();
-  void Update(Input input);
+  void Update(Input input, Maze maze);
 
   void WaitForTargetFrameRate();
 };
