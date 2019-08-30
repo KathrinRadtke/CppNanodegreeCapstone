@@ -112,7 +112,7 @@ void Renderer::Render(const Maze &maze)
       if(cell.visited)
       {
           SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0xCC, 0x00, 0xFF);
-      }
+      
 
       SDL_RenderFillRect(sdl_renderer, &block);
 
@@ -120,7 +120,7 @@ void Renderer::Render(const Maze &maze)
       Render(cell.wallTop);
       Render(cell.wallRight);
       Render(cell.wallBottom);
- 
+      }
     }
   }
 }

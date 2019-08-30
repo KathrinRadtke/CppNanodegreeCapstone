@@ -30,6 +30,7 @@ void Maze::CreateCells()
 void Maze::StartGeneration()
 {
     currentCell = &cells[0][0];
+    currentCell-> visited = true;
 
     visitedCellCount = 0;
     VisitNextCell();
@@ -37,7 +38,7 @@ void Maze::StartGeneration()
 
 void Maze::VisitNextCell()
 {
-    if(visitedCellCount <  10/* horizontalCellCount * verticalCellCount*/)
+    if(visitedCellCount <  400/* horizontalCellCount * verticalCellCount*/)
     {
         if(HasUnvisitedNeighbor(*currentCell))
         { 
@@ -49,7 +50,7 @@ void Maze::VisitNextCell()
             backtrackCells.push(currentCell);
             //std::cout << currentCell->xPosition << " " << currentCell->yPosition << std::endl;
            // std::cout << currentCell->wallBottom.enabled << " " << currentCell->wallRight.enabled << std::endl;
-            std::cout << cells[currentCell->xPosition][currentCell->yPosition].wallBottom.enabled << " " << cells[currentCell->xPosition][currentCell->yPosition].wallRight.enabled << std::endl;
+            //std::cout << cells[currentCell->xPosition][currentCell->yPosition].wallBottom.enabled << " " << cells[currentCell->xPosition][currentCell->yPosition].wallRight.enabled << std::endl;
 
             VisitNextCell();
         }
@@ -77,8 +78,10 @@ bool Maze::HasUnvisitedNeighbor(Cell cell)
 
 Cell* Maze::GetRandomUnvisitedNeighbor(Cell cell)
 {
-    int randomNumber = std::rand()/((RAND_MAX + 1u)/3);
-    return GetNeighbors(cell)[randomNumber];
+    std::vector<Cell*> neighbors = GetNeighbors(cell);
+    int randomNumber = std::rand()/((RAND_MAX + 1u)/neighbors.size() - 1);
+    std::cout << randomNumber << std::endl;
+    return neighbors[randomNumber];
 }
 
 std::vector<Cell*> Maze::GetNeighbors(Cell cell)

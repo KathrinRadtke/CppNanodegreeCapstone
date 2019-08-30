@@ -11,7 +11,7 @@ void Cell::CalculateWalls()
     wallLeft = Wall(xPosition, yPosition + 1, xPosition, yPosition);
     wallTop = Wall(xPosition, yPosition, xPosition + 1, yPosition);
     wallRight = Wall(xPosition + 1, yPosition, xPosition + 1, yPosition + 1);
-    wallBottom = Wall(xPosition + 1, yPosition + 1, xPosition + 1, yPosition + 1);
+    wallBottom = Wall(xPosition + 1, yPosition + 1, xPosition, yPosition + 1);
 }
 
 void Cell::Merge(Cell *cell)
@@ -28,13 +28,13 @@ void Cell::Merge(Cell *cell)
         cell->wallRight.enabled = false;
         wallLeft.enabled = false;
     }
-    if(cell->yPosition < yPosition)
+    if(cell->yPosition > yPosition)
     {
         std::cout << "top / bottom" << std::endl;
         cell->wallTop.enabled = false;
         wallBottom.enabled = false;
     }
-    if(cell->yPosition > yPosition)
+    if(cell->yPosition < yPosition)
     {        
         std::cout << "bottom / top" << std::endl;
         cell->wallBottom.enabled = false;

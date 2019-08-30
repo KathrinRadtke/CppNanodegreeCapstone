@@ -22,7 +22,6 @@ void Game::Run()
   bool running = true;
   InputHandler inputHandler;
   Maze maze(20, 20);
-  maze.Generate();
 
   while (running) {
     Input input = inputHandler.GetInput();
