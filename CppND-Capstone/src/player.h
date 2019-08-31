@@ -7,16 +7,22 @@
 class Player: public GameObject
 {
     public:
-        Player(int xPosition, int yPosition, std::string spriteName, Maze maze) : GameObject(xPosition, yPosition, spriteName), maze(maze){
-            currentCell = maze.cells[xPosition][yPosition];
-            std::cout << xPosition << std::endl;
+        Player(int xPosition, int yPosition, std::string spriteName, Maze *maze) 
+        : GameObject(xPosition, yPosition, spriteName), 
+        startXPosition(xPosition), startYPosition(yPosition), maze(maze){
+            currentCell = maze->cells[xPosition][yPosition];
         };
 
         void Update(Input input) override;
         void Init() override;
 
     private:
+        int startXPosition;
+        int startYPosition;
+
         void Move(Input input);
-        Maze maze;
+        void Reset();
+        Maze* maze;
         Cell currentCell;
+    
 };

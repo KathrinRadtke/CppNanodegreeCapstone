@@ -5,6 +5,21 @@
 void Player::Update(Input input)
 {
     Move(input);
+    if(maze->HasReachedEnding(xPosition, yPosition))
+    {
+        Reset();
+    }
+
+}
+
+void Player::Reset()
+{
+    xPosition = startXPosition;
+    yPosition = startYPosition;
+
+    maze->Generate();
+
+    currentCell = maze->cells[xPosition][yPosition];
 }
 
 void Player::Move(Input input)
@@ -31,11 +46,11 @@ void Player::Move(Input input)
     }
 
     if((xPosition != newXPosition || yPosition != newYPosition) 
-        && maze.IsMovementAllowed(currentCell, newXPosition, newYPosition))
+        && maze->IsMovementAllowed(currentCell, newXPosition, newYPosition))
     {
         xPosition = newXPosition;
         yPosition = newYPosition;
-        currentCell = maze.cells[xPosition][yPosition];
+        currentCell = maze->cells[xPosition][yPosition];
     }
 }
 

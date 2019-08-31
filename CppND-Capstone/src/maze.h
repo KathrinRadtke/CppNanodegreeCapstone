@@ -8,10 +8,12 @@ class Maze
 {
     public:
         Maze(int horizontalCellCount, int verticalCellCount);
+        ~Maze();
         std::vector<std::vector<Cell>> cells;
 
         void Generate();
         bool IsMovementAllowed(Cell start, int newXPosition, int newYPosition);
+        bool HasReachedEnding(int xPosition, int yPosition);
 
 
     private:

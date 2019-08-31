@@ -73,7 +73,7 @@ Renderer::~Renderer() {
 
 void Renderer::Clear()
 {
-  SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
+  SDL_SetRenderDrawColor(sdl_renderer, 255, 180, 200, 255);
   SDL_RenderClear(sdl_renderer);
 }
 
@@ -86,7 +86,7 @@ void Renderer::Render(const GameObject &gameObject)
   block.y = gameObject.yPosition * block.h;
 
 
-  std::string imagePath = getResourcePath("Player") + gameObject.spriteName;
+  std::string imagePath = getResourcePath("Objects") + gameObject.spriteName;
   SDL_Surface *bmp = SDL_LoadBMP(imagePath.c_str());
 
   SDL_Texture *tex = SDL_CreateTextureFromSurface(sdl_renderer, bmp);
@@ -101,33 +101,38 @@ void Renderer::Render(const Maze &maze)
   {
     for(Cell cell : rows)
     {
-     
-      SDL_Rect block;
+       SDL_Rect block;
       block.w = grid_width;
-      block.h = grid_height;
+      block.h = grid_height;  
       block.x = cell.xPosition * block.w;
       block.y = cell.yPosition * block.h;
-
-      SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-      if(cell.visited)
-      {
-          SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0xCC, 0x00, 0xFF);
-      
-
-      SDL_RenderFillRect(sdl_renderer, &block);
 
       Render(cell.wallLeft);
       Render(cell.wallTop);
       Render(cell.wallRight);
       Render(cell.wallBottom);
-      }
     }
   }
+  
+  // render goal
+  SDL_Rect block;
+  block.w = grid_width;
+  block.h = grid_height;
+  block.x = 19 * block.w;
+  block.y = 19 * block.h;
+
+  std::string imagePath = getResourcePath("Objects") + "bone.bmp";
+  SDL_Surface *bone = SDL_LoadBMP(imagePath.c_str());
+
+  SDL_Texture *boneTex = SDL_CreateTextureFromSurface(sdl_renderer, bone);
+
+  SDL_FreeSurface(bone);
+  SDL_RenderCopy(sdl_renderer, boneTex, NULL, &block);
 }
 
 void Renderer::Render(const Wall &wall)
 {
-  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0xFF, 0xFF);
+  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
   if(wall.enabled)
   {
     SDL_RenderDrawLine(sdl_renderer, wall.startX * grid_width, wall.startY * grid_height, wall.endX * grid_width, wall.endY * grid_height);

@@ -6,6 +6,17 @@ Maze::Maze(int horizontalCellCount, int verticalCellCount) : horizontalCellCount
     Generate();
 }
 
+Maze::~Maze()
+{
+    cells.clear();
+    while(backtrackCells.size() > 0)
+    {
+        Cell* temp = backtrackCells.top();
+        delete(temp);
+        backtrackCells.pop();
+    }
+}
+
 void Maze::Generate()
 {
     CreateCells();
@@ -14,6 +25,15 @@ void Maze::Generate()
 
 void Maze::CreateCells()
 {
+    cells.clear();
+
+    while(backtrackCells.size() > 0)
+    {
+        Cell* temp = backtrackCells.top();
+        delete(temp);
+        backtrackCells.pop();
+    }
+
     for(int i = 0; i< horizontalCellCount; i++)
     {
         std::vector<Cell> column;
@@ -22,6 +42,8 @@ void Maze::CreateCells()
         {
             Cell cell(i, j);
             column.push_back(cell);
+            std::cout << "add Cell " << cell.xPosition << " : " << cell.yPosition << std::endl;
+
         }
         cells.push_back(column);
     }
@@ -115,4 +137,8 @@ bool Maze::IsMovementAllowed(Cell start, int newXPosition, int newYPosition)
     return start.IsMovementAllowed(newXPosition, newYPosition);
 }
 
+bool Maze::HasReachedEnding(int xPosition, int yPosition)
+{
+    return xPosition == horizontalCellCount - 1  && yPosition == verticalCellCount - 1;
+}
 

@@ -14,7 +14,7 @@ Game::Game(Renderer &renderer, std::size_t grid_width, std::size_t grid_height, 
 
 void Game::Setup()
 {
-  std::shared_ptr<Player> player(new Player(0, 0, "dog.bmp", maze));
+  std::shared_ptr<Player> player(new Player(0, 0, "dog.bmp", &maze));
   gameObjects.push_back(player);
 }
 
