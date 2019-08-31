@@ -168,10 +168,13 @@ CMakeFiles/DogGame.dir/src/maze.cpp.o: ../src/maze.cpp
 CMakeFiles/DogGame.dir/src/maze.cpp.o: ../src/maze.h
 CMakeFiles/DogGame.dir/src/maze.cpp.o: ../src/wall.h
 
+CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/cell.h
 CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/gameObject.h
 CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/inputHandler.h
+CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/maze.h
 CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/player.cpp
 CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/player.h
+CMakeFiles/DogGame.dir/src/player.cpp.o: ../src/wall.h
 
 CMakeFiles/DogGame.dir/src/renderer.cpp.o: ../src/cell.h
 CMakeFiles/DogGame.dir/src/renderer.cpp.o: ../src/gameObject.h

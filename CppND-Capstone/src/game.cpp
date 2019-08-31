@@ -6,14 +6,15 @@ Game::Game(Renderer &renderer, std::size_t grid_width, std::size_t grid_height, 
       renderer(renderer),
       random_w(0, static_cast<int>(grid_width)),
       random_h(0, static_cast<int>(grid_height)),
-      target_frame_duration(target_frame_duration) 
+      target_frame_duration(target_frame_duration),
+      maze(20, 20)
 {
   Setup();
 }
 
 void Game::Setup()
 {
-  std::shared_ptr<Player> player(new Player(10, 10, "dog.bmp"));
+  std::shared_ptr<Player> player(new Player(0, 0, "dog.bmp", maze));
   gameObjects.push_back(player);
 }
 
@@ -21,7 +22,6 @@ void Game::Run()
 {
   bool running = true;
   InputHandler inputHandler;
-  Maze maze(20, 20);
 
   while (running) {
     Input input = inputHandler.GetInput();

@@ -27,6 +27,8 @@ class Game {
   Uint32 frame_end;
   Uint32 frame_duration;
 
+  Maze maze;
+
   std::vector<std::shared_ptr<GameObject>> gameObjects;
 
   void Setup();

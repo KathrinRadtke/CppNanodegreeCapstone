@@ -6,23 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.cpp
+cell.h
 /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.h
-wall.h
-/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/wall.h
-
-/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.cpp
-maze.h
-/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.h
 iostream
 -
 
-/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.h
-cell.h
 /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.h
-vector
--
-stack
--
+wall.h
+/Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/wall.h
 
 /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/wall.h
 vector

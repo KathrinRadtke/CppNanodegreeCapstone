@@ -19,5 +19,6 @@ class Cell
         Cell(int xPosition, int yPosition);
         
         void CalculateWalls();
+        bool IsMovementAllowed(int newXPosition, int newYPosition);
         void Merge(Cell* cell);
 };

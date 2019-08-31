@@ -18,26 +18,44 @@ void Cell::Merge(Cell *cell)
 {
     if(cell->xPosition > xPosition)
     {
-        std::cout << "left / right" << std::endl;
         cell->wallLeft.enabled = false;
         wallRight.enabled = false;
     }
     if(cell->xPosition < xPosition)
     {
-        std::cout << "right / left" << std::endl;
         cell->wallRight.enabled = false;
         wallLeft.enabled = false;
     }
     if(cell->yPosition > yPosition)
     {
-        std::cout << "top / bottom" << std::endl;
         cell->wallTop.enabled = false;
         wallBottom.enabled = false;
     }
     if(cell->yPosition < yPosition)
     {        
-        std::cout << "bottom / top" << std::endl;
         cell->wallBottom.enabled = false;
         wallTop.enabled = false;
     }
 }
+
+bool Cell::IsMovementAllowed(int newXPosition, int newYPosition)
+{
+    if(xPosition > newXPosition)
+    {
+        return !wallLeft.enabled;
+    }
+    if(xPosition < newXPosition)
+    {
+        return !wallRight.enabled;
+    }
+    if(yPosition > newYPosition)
+    {
+        return !wallTop.enabled;
+    }
+    if(yPosition < newYPosition)
+    {        
+        return !wallBottom.enabled;
+    }
+    return false;
+}
+

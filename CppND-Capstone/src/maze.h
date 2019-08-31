@@ -8,8 +8,11 @@ class Maze
 {
     public:
         Maze(int horizontalCellCount, int verticalCellCount);
-        void Generate();
         std::vector<std::vector<Cell>> cells;
+
+        void Generate();
+        bool IsMovementAllowed(Cell start, int newXPosition, int newYPosition);
+
 
     private:
         std::stack<Cell*> backtrackCells;

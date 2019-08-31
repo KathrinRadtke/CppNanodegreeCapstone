@@ -9,22 +9,33 @@ void Player::Update(Input input)
 
 void Player::Move(Input input)
 {
+    int newXPosition = xPosition;
+    int newYPosition = yPosition;
+
     switch (input)
     {
     case Input::Left:
-        xPosition -= 1;
+        newXPosition -= 1;
         break;
     case Input::Right:
-        xPosition += 1;
+        newXPosition += 1;
         break;
     case Input::Up:
-        yPosition -= 1;
+        newYPosition -= 1;
         break;
     case Input::Down:
-        yPosition += 1;
+        newYPosition += 1;
         break;
     default:
         break;
+    }
+
+    if((xPosition != newXPosition || yPosition != newYPosition) 
+        && maze.IsMovementAllowed(currentCell, newXPosition, newYPosition))
+    {
+        xPosition = newXPosition;
+        yPosition = newYPosition;
+        currentCell = maze.cells[xPosition][yPosition];
     }
 }
 

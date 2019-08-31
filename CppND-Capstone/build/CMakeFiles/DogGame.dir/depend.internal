@@ -169,10 +169,13 @@ CMakeFiles/DogGame.dir/src/maze.cpp.o
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.h
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/wall.h
 CMakeFiles/DogGame.dir/src/player.cpp.o
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.h
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.h
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/inputHandler.h
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/maze.h
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/player.cpp
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/player.h
+ /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/wall.h
 CMakeFiles/DogGame.dir/src/renderer.cpp.o
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/cell.h
  /Users/kathrinradtke/Desktop/Repos/CppNanodegreeCapstone/CppND-Capstone/src/gameObject.h
